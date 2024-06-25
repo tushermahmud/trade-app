@@ -8,7 +8,7 @@ export default function Home() {
   const [ws, setWs] = useState<WebSocket | null>(null);
 
   useEffect(() => {
-    const socket = new WebSocket("ws://localhost:4000");
+    const socket = new WebSocket("https://20-84-120-183.sslip.io/");
     socket.onopen = function (e) {
       setWs(socket);
       socket.send("Hello Server!");
